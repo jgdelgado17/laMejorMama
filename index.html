@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mejor mamá</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="container bg-primary text-white text-center">
+    <h1 class="display-1 fw-bold">Hola Maria del Carmen,¿Eres la mejor mamá del mundo mundial?</h1>
+    <div class="mt-5">
+        <button class="btn btn-light btn-lg" onmouseenter="noquiere(event)">
+            Si, soy la mejor mamádel mundo
+        </button>
+    
+        <button class="btn btn-danger ms-2 btn-lg" onclick="siQuiere()">
+            No, Leydi no moleste
+        </button>
+    </div>
+
+    <script>
+        function noquiere(evt){
+            let target = evt.target;
+            let maxWidth = window.innerWidth;
+            let maxHeight = window.innerHeight;
+
+            let randomWidth = getRandomInt(0, maxWidth - target.offsetWidth);
+            let randomHeight = getRandomInt(0, maxHeight - target.offsetHeight);
+
+            target.style.position = 'absolute';
+            target.style.top = randomHeight + 'px';
+            target.style.left = randomWidth + 'px';
+        }
+
+        function siQuiere(){
+            alert('Claro que eres la mejor madre del mundo, eso jamas lo dude madrecita linda')
+        }
+
+        function getRandomInt(min,max){
+            return Math.floor(Math.random() * (max-min)) + min;
+        }
+    </script>
+</body>
+
+</html>
