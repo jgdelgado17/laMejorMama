@@ -13,7 +13,7 @@
 </head>
 
 <body class="container bg-primary text-white text-center">
-    <h1 class="display-1 fw-bold">Hola Maria del Carmen,¿Eres la mejor mamá del mundo mundial?</h1>
+    <h1 class="display-1 fw-bold">Hola Maria del Carmen, ¿Eres la mejor mamá del mundo mundial?</h1>
     <div class="mt-5">
         <button class="btn btn-light btn-lg" onmouseenter="noquiere(event)">
             Si, soy la mejor mamádel mundo
@@ -23,6 +23,7 @@
             No, Leydi no moleste
         </button>
     </div>
+    <h3>Click en tu respuesta</h3>
 
     <script>
         function noquiere(evt){
@@ -39,7 +40,8 @@
         }
 
         function siQuiere(){
-            alert('Claro que eres la mejor madre del mundo, eso jamas lo dude madrecita linda')
+            alert('Claro que eres la mejor madre del mundo, eso jamas lo dude madrecita linda');
+            window.location.reload();
         }
 
         function getRandomInt(min,max){
